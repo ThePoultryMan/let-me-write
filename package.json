@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt build",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
@@ -15,6 +15,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@tiptap/starter-kit": "^2.0.0-beta.202",
+    "@tiptap/vue-2": "^2.0.0-beta.202",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",
