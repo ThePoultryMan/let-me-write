@@ -1,9 +1,17 @@
 <template>
-  <editor-content :editor="editor" />
+  <div>
+    <div class="flex justify-center px-16">
+      <button
+      class="bg-gray-200 w-6 rounded-lg"
+      @click="editor.chain().focus().toggleBold().run()"
+      >B</button>
+    </div>
+    <editor-content :editor="editor" />
+  </div>
 </template>
 
 <script>
-import { Editor, EditorContent } from "@tiptap/vue-2";
+import { Editor, EditorContent } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit"; // eslint-disable-line
 
 export default {
@@ -25,7 +33,7 @@ export default {
     })
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     this.editor.destroy();
   },
 }
