@@ -11,7 +11,8 @@ export default defineNuxtConfig({
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   modules: [
     // Sytlelint and Eslint can be added here when they work again.
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

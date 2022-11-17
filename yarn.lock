@@ -633,7 +633,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@3.0.0", "@nuxt/kit@^3.0.0-rc.12", "@nuxt/kit@^3.0.0-rc.14":
+"@nuxt/kit@3.0.0", "@nuxt/kit@^3.0.0-rc.10", "@nuxt/kit@^3.0.0-rc.12", "@nuxt/kit@^3.0.0-rc.14":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0.tgz#ae49b4e27b15285556cb88f35a56309c5ca0dd79"
   integrity sha512-7ZsOLt5s9a0ZleAIzmoD70JwkZf5ti6bDdxl6f8ew7Huxz+ni/oRfTPTX9TrORXsgW5CvDt6Q9M7IJNPkAN/Iw==
@@ -1013,6 +1013,11 @@
   version "2.0.0-beta.202"
   resolved "https://registry.yarnpkg.com/@tiptap/extension-text/-/extension-text-2.0.0-beta.202.tgz#d0152f547572a14c4e0e88287acb2b0c311fef04"
   integrity sha512-6UsfU9xvKTxHfZYxVJy5DSQ0ibnhC403KLRQ4ePwpJql0TotBx93/CBfPCVLFEwF86HNhf1fFUCx+j2wuwVxmA==
+
+"@tiptap/extension-underline@^2.0.0-beta.202":
+  version "2.0.0-beta.202"
+  resolved "https://registry.yarnpkg.com/@tiptap/extension-underline/-/extension-underline-2.0.0-beta.202.tgz#68104f46c3bde4b36f8bbf902a02befc8221c98f"
+  integrity sha512-aZ2BdBDopL7KNDQZZ707VIF6S2FUHGMQxJvfGPrgvCHY5lu34B9F/FGCMPd5VAZC0vaJlHTQ30FWkeQjIDetWg==
 
 "@tiptap/starter-kit@^2.0.0-beta.202":
   version "2.0.0-beta.202"
@@ -4917,6 +4922,14 @@ nuxi@3.0.0:
   integrity sha512-VWh1kKFffxD2yadZWcQSd6eTf9okXRr7d3HsjLiI4B3Q1/8iKdIUiodGo7X71OZ+gPVnX6Oh/XFzcb7mr+8TbQ==
   optionalDependencies:
     fsevents "~2.3.2"
+
+nuxt-icon@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/nuxt-icon/-/nuxt-icon-0.1.7.tgz#af39787aba0146ced1f4eeee7eeb1658917b89e3"
+  integrity sha512-JQ2OKKulcDAUMiPY3Q4YaXncL5de9fiVdrgXKnNZU3Cs2VbR//RAR9xt90+hpmVzDSdEB5UXIJLnWc5uBxm/hw==
+  dependencies:
+    "@iconify/vue" "^4.0.0"
+    "@nuxt/kit" "^3.0.0-rc.10"
 
 nuxt@^3.0.0:
   version "3.0.0"

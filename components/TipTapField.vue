@@ -1,10 +1,26 @@
 <template>
   <div>
-    <div class="flex justify-center px-16">
+    <div class="flex justify-center text-center">
       <button
-      class="bg-gray-200 w-6 rounded-lg"
-      @click="editor.chain().focus().toggleBold().run()"
+        class="bg-gray-200 w-6 rounded-l-lg"
+        :class="{ 'font-bold': isActive('bold') }"
+        @click="editor.chain().focus().toggleBold().run()"
       >B</button>
+      <button
+        class="bg-gray-200 w-6"
+        :class="{ 'italic': isActive('italic') }"
+        @click="editor.chain().focus().toggleItalic().run()"
+      >I</button>
+      <button
+        class="bg-gray-200 w-6"
+        :class="{ 'underline': isActive('underline') }"
+        @click="editor.chain().focus().toggleUnderline().run()"
+      >U</button>
+      <button
+        class="bg-gray-200 w-6 rounded-r-lg"
+        :class="{ 'line-through': isActive('strike') }"
+        @click="editor.chain().focus().toggleStrike().run()"
+      >S</button>
     </div>
     <editor-content :editor="editor" />
   </div>
@@ -13,6 +29,7 @@
 <script>
 import { Editor, EditorContent } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit"; // eslint-disable-line
+import Underline from "@tiptap/extension-underline"
 
 export default {
   components: {
@@ -29,6 +46,7 @@ export default {
     this.editor = new Editor({
       extensions: [
         StarterKit,
+        Underline,
       ],
     })
   },
@@ -36,6 +54,16 @@ export default {
   beforeUnmount() {
     this.editor.destroy();
   },
+
+  methods: {
+    isActive: function(type) {
+      if(this.editor != null) {
+        return this.editor.isActive(type);
+      } else {
+        return false;
+      }
+    }
+  }
 }
 </script>
 
@@ -45,5 +73,5 @@ export default {
   border: none;
   outline: none;
 }
-/* styleling-enable */
+/* stylelint-enable */
 </style>
