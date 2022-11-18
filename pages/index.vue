@@ -8,12 +8,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "LetMeWrite",
-  head: {
-    title: "Let Me Write"
-  }
-}
-</script>

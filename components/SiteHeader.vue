@@ -3,12 +3,14 @@
     <NuxtLink to="/"><h1 class="text-lg">let me write</h1></NuxtLink>
     <div class="w-px h-6 mt-0.5 bg-gray-400" />
     <button @click="active = !active">preferences</button>
-    <div 
-    v-show="active"
-    class="pref-menu border-solid border border-gray-800"
-    >
-      <h3>preferences</h3>
-    </div>
+    <Transition name="slide-down">
+      <div
+        v-show="active"
+        class="pref-menu border-solid border border-t-0 border-gray-800 rounded-b-md w-36 -z-10"
+      >
+        <div></div>
+      </div>
+    </Transition>
   </header>
 </template>
 
@@ -17,15 +19,32 @@ export default {
   data() {
     return {
       active: false,
-    }
+    };
   },
-}
+};
 </script>
 
 <style>
 .pref-menu {
   position: absolute;
-  left: 142px;
-  top: 24px;
+  left: 132px;
+  top: 32px;
+}
+
+@keyframes slide-down {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 32px;
+  }
+}
+
+.slide-down-enter-active {
+  animation: slide-down 0.25s;
+}
+
+.slide-down-leave-active {
+  animation: slide-down 0.25s reverse;
 }
 </style>
